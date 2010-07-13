@@ -1,0 +1,1518 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>
+Method Dependencies for Initially Live Code
+</title>
+<style type="text/css" media="screen">
+@import url('goog.css');
+@import url('inlay.css');
+@import url('soyc.css');
+</style>
+</head>
+<body>
+<div class="g-doc">
+<div id="hd" class="g-section g-tpl-50-50 g-split">
+<div class="g-unit g-first">
+<p>
+<a href="index.html" id="gwt-logo" class="soyc-ir"><span>Google Web Toolkit</span></a>
+</p>
+</div>
+<div class="g-unit">
+</div>
+</div>
+<div id="soyc-appbar-lrg">
+<div class="g-section g-tpl-75-25 g-split">
+<div class="g-unit g-first">
+<h1>Method Dependencies for Initially Live Code</h1>
+</div>
+<div class="g-unit"></div>
+</div>
+</div>
+<div id="bd">
+<h2>Showing Package: com.google.gwt.dom.client</h2>
+<a name="com.google.gwt.dom.client.DOMImpl"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.DOMImpl</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplTrident::$getInnerText</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$createScriptElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Document::$createScriptElement</li>
+<li>com.google.gwt.user.client.impl.WindowImplIE::$initHandler</li>
+<li>com.google.gwt.user.client.Window::maybeInitializeCloseHandlers</li>
+<li>com.google.gwt.user.client.Window::addCloseHandler</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$eventGetAltKey</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::onBrowserEvent</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$eventGetButton</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::onBrowserEvent</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$eventGetKeyCode</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::$keyboardNavigation</li>
+<li>com.google.gwt.user.client.ui.Tree::onBrowserEvent</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$eventGetMetaKey</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::onBrowserEvent</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$eventGetType</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.DOM::dispatchEventImpl</li>
+<li>com.google.gwt.user.client.DOM::dispatchEvent</li>
+<li>com.google.gwt.user.client.impl.DOMImplTrident::$initEventSystem</li>
+<li>com.google.gwt.user.client.impl.DOMImpl::$maybeInitializeEventSystem</li>
+<li>com.google.gwt.user.client.DOM::sinkEvents</li>
+<li>com.google.gwt.user.client.ui.Widget::$sinkEvents</li>
+<li>com.google.gwt.user.client.ui.Widget::$onAttach</li>
+<li>com.google.gwt.user.client.ui.AttachDetachException$1::execute</li>
+<li>com.google.gwt.user.client.ui.AttachDetachException::tryCommand</li>
+<li>com.google.gwt.user.client.ui.RootPanel::detachWidgets</li>
+<li>com.google.gwt.user.client.ui.RootPanel$2::onClose</li>
+<li>com.google.gwt.event.logical.shared.CloseHandler::$clinit</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$getFirstChildElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplTrident::$createElement</li>
+<li>com.google.gwt.dom.client.Document::$createTableElement</li>
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$getParentElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.ComplexPanel::$remove</li>
+<li>com.google.gwt.user.client.ui.AbsolutePanel::$remove</li>
+<li>com.google.gwt.user.client.ui.WidgetCollection$WidgetIterator::remove</li>
+<li>com.google.gwt.user.client.ui.WidgetCollection::iterator</li>
+<li>com.google.gwt.user.client.ui.ComplexPanel::$$init</li>
+<li>com.google.gwt.user.client.ui.RootPanel::$RootPanel</li>
+<li>com.google.gwt.user.client.ui.RootPanel$DefaultRootPanel::$RootPanel$DefaultRootPanel</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$getScrollLeft</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$getScrollTop</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteTop</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteTop</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImpl::$scrollIntoView</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.DOM::scrollIntoView</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.DOMImplIE6"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.DOMImplIE6</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplIE6</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImpl::$clinit</li>
+<li>com.google.gwt.dom.client.DOMImplTrident::$getInnerText</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplIE6::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$DOMImplIE6</li>
+<li>com.google.gwt.dom.client.DOMImpl::$clinit</li>
+<li>com.google.gwt.dom.client.DOMImplTrident::$getInnerText</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteTop</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.DOM::getAbsoluteTop</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplIE6::$getScrollLeft</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Element::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImpl::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplIE6::$getZoomMultiple</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.DOMImplTrident"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.DOMImplTrident</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$clinit</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$DOMImplIE6</li>
+<li>com.google.gwt.dom.client.DOMImpl::$clinit</li>
+<li>com.google.gwt.dom.client.DOMImplTrident::$getInnerText</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$createElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Document::$createTableElement</li>
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$createElementInternal</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplTrident::$createElement</li>
+<li>com.google.gwt.dom.client.Document::$createTableElement</li>
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$ensureContainer</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplTrident::$createElement</li>
+<li>com.google.gwt.dom.client.Document::$createTableElement</li>
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$eventGetRelatedTarget</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Widget::$onBrowserEvent</li>
+<li>com.google.gwt.user.client.ui.Widget::onBrowserEvent</li>
+<li>com.google.gwt.user.client.EventListener::$clinit</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$eventGetTarget</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::onBrowserEvent</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$eventPreventDefault</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::onBrowserEvent</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$getAttribute</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::$updateAriaAttributes</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$getBoundingClientRectLeft</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$getBoundingClientRectTop</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteTop</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteTop</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$getInnerText</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$isOrHasChild</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Node::$isOrHasChild</li>
+<li>com.google.gwt.user.client.ui.Widget::$onBrowserEvent</li>
+<li>com.google.gwt.user.client.ui.Widget::onBrowserEvent</li>
+<li>com.google.gwt.user.client.EventListener::$clinit</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.DOMImplTrident::$isRTL</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.Element::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImpl::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Document"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Document</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Document::$getElementById</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$createDivElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$createScriptElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.impl.WindowImplIE::$initHandler</li>
+<li>com.google.gwt.user.client.Window::maybeInitializeCloseHandlers</li>
+<li>com.google.gwt.user.client.Window::addCloseHandler</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$createSpanElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$createStructure</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$createStructure</li>
+<li>com.google.gwt.user.client.ui.Image$ClippedState::$Image$ClippedState</li>
+<li>com.google.gwt.user.client.ui.Image::$Image</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$createTBodyElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$createTDElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$createTRElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$createTableElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$createUniqueId</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$getBody</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.impl.WindowImplIE::$initHandler</li>
+<li>com.google.gwt.user.client.Window::maybeInitializeCloseHandlers</li>
+<li>com.google.gwt.user.client.Window::addCloseHandler</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$getCompatMode</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getZoomMultiple</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$getDocumentElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImpl::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::$getElementById</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Document::get</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Element"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Element</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.UIObject::setStyleName</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setSelected</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$blur</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::$setFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Element::$getElementsByTagName</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getClassName</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getClientWidth</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.Element::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImpl::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getElementsByTagName</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getId</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getInnerText</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getOffsetWidth</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getZoomMultiple</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getPropertyInt</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getPropertyString</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::getChildCategories</li>
+<li>org.herban.categoryfilter.client.CategoryFilter$1::$onSelection</li>
+<li>com.google.gwt.event.logical.shared.SelectionEvent::dispatch</li>
+<li>com.google.gwt.event.logical.shared.SelectionEvent::fire</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getScrollHeight</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemAnimation::$onStart</li>
+<li>com.google.gwt.animation.client.Animation::$update</li>
+<li>com.google.gwt.animation.client.Animation::$run</li>
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemAnimation::$setItemState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getScrollLeft</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImpl::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getScrollTop</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImpl::$getScrollTop</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteTop</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteTop</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getScrollWidth</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.Element::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImpl::$getScrollLeft</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$getStyle</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$removeAttribute</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Tree::$updateAriaAttributes</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$removeClassName</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.UIObject::setStyleName</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setSelected</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$setAttribute</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$setClassName</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Element::$addClassName</li>
+<li>com.google.gwt.user.client.ui.UIObject::setStyleName</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setSelected</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$setInnerHTML</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplTrident::$createElement</li>
+<li>com.google.gwt.dom.client.Document::$createTableElement</li>
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$setPropertyInt</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$setPropertyString</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Element::$setTabIndex</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.impl.FocusImpl::$createFocusable</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.ImageSrcIE6"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.ImageSrcIE6</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::addChild</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::addTop</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::removeTop</li>
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::executeBackgroundImageCacheCommand</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::$clinit</li>
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::getImgSrc</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::getPendingSrc</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::getTop</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::removeChild</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::removeTop</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</li>
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ImageSrcIE6::setImgSrc</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.DOM::setImgSrc</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::injectGlobalHandler</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImagePrototype::$createImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$setImages</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Node"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Node</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Node</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Node::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Element::$getElementsByTagName</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Node::$cloneNode</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Node::$getNextSibling</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$convertToFullNode</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$initChildren</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Node::$getOwnerDocument</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Node::$getParentElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplIE6::$getZoomMultiple</li>
+<li>com.google.gwt.dom.client.DOMImplIE6::$getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.DOM::getAbsoluteLeft</li>
+<li>com.google.gwt.user.client.ui.Tree::$moveFocus</li>
+<li>com.google.gwt.user.client.ui.Tree::$onSelection</li>
+<li>com.google.gwt.user.client.ui.Tree::$setSelectedItem</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Node::$isOrHasChild</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.Widget::$onBrowserEvent</li>
+<li>com.google.gwt.user.client.ui.Widget::onBrowserEvent</li>
+<li>com.google.gwt.user.client.EventListener::$clinit</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Node::$removeChild</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImplTrident::$createElement</li>
+<li>com.google.gwt.dom.client.Document::$createTableElement</li>
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.NodeList"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.NodeList</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.NodeList</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.NodeList::$getLength</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.NodeList::$getItem</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.NodeList::$getLength</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.ScriptElement"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.ScriptElement</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ScriptElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.ScriptElement::$setText</li>
+<li>com.google.gwt.dom.client.DOMImpl::$createScriptElement</li>
+<li>com.google.gwt.dom.client.Document::$createScriptElement</li>
+<li>com.google.gwt.user.client.impl.WindowImplIE::$initHandler</li>
+<li>com.google.gwt.user.client.Window::maybeInitializeCloseHandlers</li>
+<li>com.google.gwt.user.client.Window::addCloseHandler</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.ScriptElement::$setText</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.DOMImpl::$createScriptElement</li>
+<li>com.google.gwt.dom.client.Document::$createScriptElement</li>
+<li>com.google.gwt.user.client.impl.WindowImplIE::$initHandler</li>
+<li>com.google.gwt.user.client.Window::maybeInitializeCloseHandlers</li>
+<li>com.google.gwt.user.client.Window::addCloseHandler</li>
+<li>com.google.gwt.user.client.ui.RootPanel::get</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$1"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$1</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$1</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$1::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$1::$Style$Unit$1</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$2"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$2</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$2</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$2::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$2::$Style$Unit$2</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$3"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$3</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$3</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$3::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$3::$Style$Unit$3</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$4"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$4</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$4</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$4::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$4::$Style$Unit$4</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$5"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$5</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$5</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$5::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$5::$Style$Unit$5</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$6"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$6</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$6</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$6::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$6::$Style$Unit$6</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$7"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$7</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$7</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$7::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$7::$Style$Unit$7</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$8"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$8</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$8</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$8::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$8::$Style$Unit$8</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit$9"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit$9</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$9</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit$9::$clinit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style$Unit$9::$Style$Unit$9</li>
+<li>com.google.gwt.dom.client.Style$Unit::$clinit</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style$Unit"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style$Unit</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style$Unit</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImpl::$adjust</li>
+<li>com.google.gwt.user.client.ui.impl.ClippedImageImplIE6::$adjust</li>
+<li>com.google.gwt.user.client.ui.Tree::$showImage</li>
+<li>com.google.gwt.user.client.ui.Tree::$showLeafImage</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$updateState</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$setTree</li>
+<li>com.google.gwt.user.client.ui.Tree::$init</li>
+<li>com.google.gwt.user.client.ui.Tree::$Tree</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.Style"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.Style</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.Style::$setPropertyImpl</li>
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.Style::$setPropertyImpl</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.user.client.ui.TreeItem$TreeItemImpl::$initializeClonableElements</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$clinit</li>
+<li>com.google.gwt.user.client.ui.TreeItem::$TreeItem</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$buildCategoryTrees</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<a name="com.google.gwt.dom.client.TableRowElement"><h3 class="soyc-class-header">Class: com.google.gwt.dom.client.TableRowElement</a></h3>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.TableRowElement</a>
+<ul class="soyc-call-stack-list">
+<li>com.google.gwt.dom.client.TableRowElement::$getCells</li>
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+<div class='main'>
+<a class='toggle soyc-call-stack-link' onclick='toggle.call(this)'><span class='calledBy'> Call stack: </span>com.google.gwt.dom.client.TableRowElement::$getCells</a>
+<ul class="soyc-call-stack-list">
+<li>org.herban.categoryfilter.client.CategoryFilter::$onModuleLoad</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
