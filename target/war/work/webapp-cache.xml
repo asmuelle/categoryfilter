@@ -40,6 +40,7 @@
           <string>WEB-INF/classes/org/herban/categoryfilter/client/CategoryFilter.class</string>
           <string>WEB-INF/classes/org/herban/categoryfilter/client/CategoryFilter$1.class</string>
           <string>WEB-INF/web.xml</string>
+          <string>WEB-INF/classes/org/herban/categoryfilter/client/SetAlgebra.class</string>
           <string>WEB-INF/lib/gwt-servlet-2.0.3.jar</string>
         </pathsSet>
       </path-set>

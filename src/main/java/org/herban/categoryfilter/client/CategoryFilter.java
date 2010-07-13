@@ -150,7 +150,7 @@ public class CategoryFilter implements EntryPoint {
 
 	 
 	/**
-	 * Hide itemns that should be invisible, show items that should be visible
+	 * Hide items that should be invisible, show items that should be visible
 	 * @param visibleItems
 	 * @param allItems
 	 */

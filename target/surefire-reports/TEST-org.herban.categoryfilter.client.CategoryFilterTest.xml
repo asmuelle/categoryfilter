@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="28.486" errors="0" skipped="0" tests="1" name="org.herban.categoryfilter.client.CategoryFilterTest">
+<testsuite failures="0" time="28.216" errors="0" skipped="0" tests="2" name="org.herban.categoryfilter.client.CategoryFilterTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/local/share/jdk1.6.0_20/jre/lib/i386"/>
@@ -67,5 +67,6 @@
     <property name="sun.cpu.isalist" value=""/>
     <property name="org.apache.commons.logging.Log" value="com.google.gwt.dev.shell.tomcat.CommonsLoggerAdapter"/>
   </properties>
-  <testcase time="28.418" classname="org.herban.categoryfilter.client.CategoryFilterTest" name="testFieldVerifier"/>
+  <testcase time="28.015" classname="org.herban.categoryfilter.client.CategoryFilterTest" name="testCategoryUnion"/>
+  <testcase time="0.142" classname="org.herban.categoryfilter.client.CategoryFilterTest" name="testCategoryIntersection"/>
 </testsuite>
