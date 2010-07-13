@@ -22,19 +22,22 @@ import com.google.gwt.user.client.ui.TreeItem;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
+ * This class is compiled to javascript code an runs in the browser, not on the server
  */
 public class CategoryFilter implements EntryPoint {
 
-	private Set<Tree> categoryTrees= new HashSet<Tree>();
-	private Map<String, Set<String>> sitesByCategory = new HashMap<String, Set<String>>();
-	private Set<String> allSites = new TreeSet<String>();
 
 	/**
-	 * This is the entry point method.
+	 * This is the entry point method. It parses the HTML response of the webserver.
+	 * The elements inside the <div id=catlist> are interpreted as categories
+	 * The rows belonging to <tbody id=sitetable> are interpreted as item list to be filtered
 	 */
 	public void onModuleLoad() {
 
-		 buildCategoryTrees();
+		final Set<Tree> categoryTrees= buildCategoryTrees();;
+		final Map<String, Set<String>> sitesByCategory = new HashMap<String, Set<String>>();
+		final Set<String> allSites = new TreeSet<String>();
+		
 
 		NodeList<Element> rowList = RootPanel.get("sitetable").getElement().getElementsByTagName("tr");
 		for (int i = 0; i < rowList.getLength(); i++) {
@@ -58,19 +61,23 @@ public class CategoryFilter implements EntryPoint {
 
 		SelectionHandler<TreeItem> handler = new SelectionHandler<TreeItem>() {
 
+			/**
+			 * This method is invoked when the user selects a category in any category tree
+			 * @param event this parameter is ignored, because on every selection the state of all category trees must be evaluated 
+			 */
 			public void onSelection(SelectionEvent<TreeItem> event) {
 
 				Set<List<String>> filters = new HashSet<List<String>>();
 				for (Tree tree : categoryTrees) {
 					TreeItem item = tree.getSelectedItem();
 					if (item != null && item.getParentItem()!=null) {
-						List<String> filter = getChildCategories(item);
+						List<String> filter = getItemCategoriesRecursivly(item);
 						if (filter != null)
 
 							filters.add(filter);
 					}
 				}
-				filterTable(getIntersectionOfSitesByFilter(filters));
+				filterTable(SetAlgebra.getIntersectionOfItemsByFilter(filters, allSites, sitesByCategory ), allSites);
 
 			}
 		};
@@ -81,8 +88,14 @@ public class CategoryFilter implements EntryPoint {
 
 	}
 
-	private void buildCategoryTrees() {
-	 
+	/**
+	 * Interpret elements below <div id=catlist> as hierarchy. The class attribute points to the parent id
+	 * Place selection trees inside <div id=menu> element
+	 * 
+	 * @return A set of Trees 
+	 */
+	public static Set<Tree>  buildCategoryTrees() {
+	    Set<Tree> categoryTrees = new HashSet<Tree>();
 		NodeList<Element> nodeList = Document.get().getElementById("catlist")
 				.getElementsByTagName("div");
 
@@ -117,56 +130,34 @@ public class CategoryFilter implements EntryPoint {
 			}
 
 		}
+		return categoryTrees;
         
 	}
-
-	private static List<String> getChildCategories(TreeItem parent) {
+	
+	/**
+	 * @param categoryTreeItem A category tree item
+	 * @return a list of category identifiers that refers to the category of the tree item and all categories of descendants
+	 */
+	public static List<String> getItemCategoriesRecursivly(TreeItem categoryTreeItem) {
 		List<String> categories = new ArrayList<String>();
-		categories.add(parent.getTitle());
+		categories.add(categoryTreeItem.getTitle());
 
-		for (int i = 0; i < parent.getChildCount(); i++) {
-			categories.addAll(getChildCategories(parent.getChild(i)));
+		for (int i = 0; i < categoryTreeItem.getChildCount(); i++) {
+			categories.addAll(getItemCategoriesRecursivly(categoryTreeItem.getChild(i)));
 		}
 		return categories;
 	}
 
-	public Set<String> getUnionOfSitesByCategories(List<String> categories) {
-		if (categories.isEmpty())
-			return allSites;
-		Set<String> visibleSites = new TreeSet<String>();
-		for (String cat : categories) {
-			Set<String> categorySites = sitesByCategory.get(cat);
-			if (categorySites != null)
-				visibleSites.addAll(categorySites);
-		}
-		return visibleSites;
-
-	}
-    /*
-     * determine set of ids of sites that fulfill the filter criteria
-     */
-	private Set<String>  getIntersectionOfSitesByFilter(Set<List<String>> filterSet) {
-		Set<String> visibleSites;
-		if (filterSet.isEmpty()){
-			visibleSites= allSites;
-		} else {
-		  visibleSites = new TreeSet<String>();
-		
-		  visibleSites.addAll(getUnionOfSitesByCategories(filterSet.iterator().next()));
-		  for (List<String> group : filterSet) {
-			visibleSites.retainAll(getUnionOfSitesByCategories(group));
-		  }
-		  
-		}
-		return visibleSites;
-	}
-    /*
-     * hide sites that should not be visible
-     */
-	private void filterTable(Set<String> visibleSites) {
-		for (String siteId:allSites) {
+	 
+	/**
+	 * Hide itemns that should be invisible, show items that should be visible
+	 * @param visibleItems
+	 * @param allItems
+	 */
+	public static void filterTable(Set<String> visibleItems, Set<String> allItems) {
+		for (String siteId:allItems) { 
 			Element row = Document.get().getElementById(siteId);
-			if (visibleSites.contains(row.getId())) {
+			if (visibleItems.contains(row.getId())) {
 				row.setAttribute("style", " ");
 			} else {
 				row.setAttribute("style", "display:none");
