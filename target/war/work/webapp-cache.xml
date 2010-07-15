@@ -5,43 +5,25 @@
       <path-set>
         <pathsSet class="linked-hash-set">
           <string>CategoryFilter.css</string>
-          <string>categoryfilter/AEC398D919259EAD840B1055F91DC53D.cache.html</string>
+          <string>org.herban.categoryfilter.CategoryFilterJUnit/org.herban.categoryfilter.CategoryFilterJUnit.nocache.js</string>
+          <string>org.herban.categoryfilter.CategoryFilterJUnit/hosted.html</string>
+          <string>org.herban.categoryfilter.CategoryFilterJUnit/clear.cache.gif</string>
           <string>categoryfilter/hosted.html</string>
-          <string>categoryfilter/gwt/standard/standard_rtl.css</string>
-          <string>categoryfilter/gwt/standard/images/hborder_ie6.png</string>
-          <string>categoryfilter/gwt/standard/images/corner.png</string>
-          <string>categoryfilter/gwt/standard/images/ie6/vborder_blue_shadow.png</string>
-          <string>categoryfilter/gwt/standard/images/ie6/corner_dialog_topright.png</string>
-          <string>categoryfilter/gwt/standard/images/ie6/vborder_gray_shadow.png</string>
-          <string>categoryfilter/gwt/standard/images/ie6/corner_dialog_topleft.png</string>
-          <string>categoryfilter/gwt/standard/images/ie6/hborder_blue_shadow.png</string>
-          <string>categoryfilter/gwt/standard/images/ie6/hborder_gray_shadow.png</string>
-          <string>categoryfilter/gwt/standard/images/vborder_ie6.png</string>
-          <string>categoryfilter/gwt/standard/images/vborder.png</string>
-          <string>categoryfilter/gwt/standard/images/corner_ie6.png</string>
-          <string>categoryfilter/gwt/standard/images/hborder.png</string>
-          <string>categoryfilter/gwt/standard/images/splitPanelThumb.png</string>
-          <string>categoryfilter/gwt/standard/standard.css</string>
-          <string>categoryfilter/EDC7827FEEA59EE44AD790B1C6430C45.cache.png</string>
-          <string>categoryfilter/396F806CD63ABD414BFBB9D57429F05B.cache.png</string>
-          <string>categoryfilter/A82AF63A601D23DE1FB1171DC84D8367.cache.html</string>
-          <string>categoryfilter/E0EBE663D4495C5762A4D6D99034AEDB.cache.html</string>
-          <string>categoryfilter/DF7764EEC1903CD03C9545B354D8D8E4.cache.png</string>
-          <string>categoryfilter/71BC084BCD84CE085E9F6EBD80A7A95A.cache.html</string>
-          <string>categoryfilter/E44767377485D18D6B6864F65BA8EF73.cache.png</string>
           <string>categoryfilter/clear.cache.gif</string>
-          <string>categoryfilter/0A9476898799A150D840F0B1C3672921.cache.png</string>
-          <string>categoryfilter/D9E00980D26197FB0660CDAD154BFE2C.cache.html</string>
-          <string>categoryfilter/3DC9EE11DBFA7880C246254580E4E853.cache.html</string>
           <string>categoryfilter/categoryfilter.nocache.js</string>
           <string>CategoryFilter.html</string>
+          <string>WEB-INF/lib/gwt-visualization-1.1.0.zip</string>
           <string>WEB-INF/lib/gwt-servlet.jar</string>
-          <string>WEB-INF/classes/org/herban/categoryfilter/CategoryFilter.gwt.xml</string>
+          <string>WEB-INF/web.xml</string>
           <string>WEB-INF/classes/org/herban/categoryfilter/client/CategoryFilter.class</string>
           <string>WEB-INF/classes/org/herban/categoryfilter/client/CategoryFilter$1.class</string>
-          <string>WEB-INF/web.xml</string>
+          <string>WEB-INF/classes/org/herban/categoryfilter/client/TabbedImageView.class</string>
+          <string>WEB-INF/classes/org/herban/categoryfilter/client/CategoryFilter$2.class</string>
+          <string>WEB-INF/classes/org/herban/categoryfilter/client/CategoryFilter$4.class</string>
+          <string>WEB-INF/classes/org/herban/categoryfilter/client/CategoryFilter$3.class</string>
           <string>WEB-INF/classes/org/herban/categoryfilter/client/SetAlgebra.class</string>
           <string>WEB-INF/lib/gwt-servlet-2.0.3.jar</string>
+          <string>WEB-INF/lib/gwt-visualization-1.0.2.jar</string>
         </pathsSet>
       </path-set>
     </entry>
@@ -91,6 +73,18 @@
         <exclusions/>
         <optional>false</optional>
       </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>com.google.gwt.google-apis</groupId>
+        <artifactId>gwt-visualization</artifactId>
+        <version>1.0.2</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions/>
+        <optional>false</optional>
+      </dependency>
+      <targetFileName>gwt-visualization-1.0.2.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
   </dependenciesInfo>
 </webapp-structure>
