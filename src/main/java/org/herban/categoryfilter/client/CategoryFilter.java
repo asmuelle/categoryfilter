@@ -19,27 +19,24 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Tree;
 import com.google.gwt.user.client.ui.TreeItem;
-import com.google.gwt.visualization.client.AbstractDataTable;
-import com.google.gwt.visualization.client.VisualizationUtils;
-import com.google.gwt.visualization.client.DataTable;
-import com.google.gwt.visualization.client.Selection;
-import com.google.gwt.visualization.client.AbstractDataTable.ColumnType;
-import com.google.gwt.visualization.client.events.SelectHandler;
-import com.google.gwt.visualization.client.visualizations.PieChart;
-import com.google.gwt.visualization.client.visualizations.PieChart.Options;
+ 
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>. This class is
  * compiled to javascript code an runs in the browser, not on the server
  */
 public class CategoryFilter implements EntryPoint {
-	 private PieChart  pie;
+	 
 	/**
 	 * This is the entry point method. It parses the HTML response of the
 	 * webserver. The elements inside the <div id=catlist> are interpreted as
@@ -52,9 +49,30 @@ public class CategoryFilter implements EntryPoint {
 		;
 		final Map<String, Set<String>> sitesByCategory = new HashMap<String, Set<String>>();
 		final Set<String> allSites = new TreeSet<String>();
+		final Set<CheckBox> selectedSites = new HashSet<CheckBox>();
+	
 		final TabbedImageView detailsView = new TabbedImageView();
-       
+        final Button compareButton=new Button("compare", new ClickHandler(){
 
+			public void onClick(ClickEvent event) {
+				detailsView.show("xyz");
+				
+			}});
+        compareButton.setVisible(false);
+        RootPanel.get().add(compareButton);
+        ValueChangeHandler valuehandler=new ValueChangeHandler(){
+
+			public void onValueChange(ValueChangeEvent event) {
+				Set<String> sites=new HashSet();
+				for (CheckBox box:selectedSites) {
+					if (box.getValue()) {
+						sites.add(box.getTitle());
+					}
+					
+				}
+				compareButton.setVisible(sites.size()>1);
+				
+			}};
 		NodeList<Element> rowList = RootPanel.get("sitetable").getElement()
 				.getElementsByTagName("tr");
 		for (int i = 0; i < rowList.getLength(); i++) {
@@ -74,11 +92,20 @@ public class CategoryFilter implements EntryPoint {
 				});
 
 				cells.getItem(2).setInnerHTML("");
+				
 				cells.getItem(2).appendChild(a.getElement());
 
 				String[] categories = cells.getItem(0).getInnerText()
 						.split(" ");
-				cells.getItem(0).removeFromParent();
+				CheckBox cb=new CheckBox();
+				selectedSites.add(cb);
+				cb.addValueChangeHandler(valuehandler);
+				cb.setTitle(tr.getId());
+				cells.getItem(0).setInnerHTML(" ");
+				cells.getItem(0).setAttribute("style", "");
+				RootPanel.get().add(cb);
+				cells.getItem(0).appendChild(cb.getElement());
+				
 				for (String cat : categories) {
 					Set<String> categorySet = sitesByCategory.get(cat);
 					if (categorySet == null) {
@@ -116,12 +143,7 @@ public class CategoryFilter implements EntryPoint {
 				Set<String> visibleSites=SetAlgebra.getIntersectionOfItemsByFilter(filters,
 						allSites, sitesByCategory);
 				filterTable(visibleSites, allSites);
-				pie.draw(createTable(visibleSites), createOptions());
-				if (visibleSites.size()<2) {
-					pie.setVisible(false);
-				} else {
-					pie.setVisible(true);
-				}
+				 
 
 			}
 		};
@@ -129,22 +151,9 @@ public class CategoryFilter implements EntryPoint {
 		for (Tree tree : categoryTrees) {
 			tree.addSelectionHandler(handler);
 		}
-		Runnable onLoadCallback = new Runnable() {
-			public void run() {
-				Panel panel = RootPanel.get("piechart");
+		 
 
-				 pie = new PieChart(createTable(allSites), createOptions());
-				                 
-				pie.addSelectHandler(createSelectHandler(pie));
-			  
-				panel.add(pie);
-			}
-		};
-
-		// Load the visualization api, passing the onLoadCallback to be called
-		// when loading is done.
-		VisualizationUtils.loadVisualizationApi(onLoadCallback,
-				PieChart.PACKAGE);
+	 
 
 	}
 
@@ -237,70 +246,6 @@ public class CategoryFilter implements EntryPoint {
 		}
 	}
 
-	private Options createOptions() {
-		Options options = Options.create();
-		options.setWidth(400);
-		options.setHeight(240);
-		options.set3D(true);
-		options.setTitle("Energy Consumption by Sites");
-		return options;
-	}
-
-	private SelectHandler createSelectHandler(final PieChart chart) {
-		return new SelectHandler() {
-			@Override
-			public void onSelect(SelectEvent event) {
-				String message = "";
-
-				// May be multiple selections.
-				JsArray<Selection> selections = chart.getSelections();
-
-				for (int i = 0; i < selections.length(); i++) {
-					// add a new line for each selection
-					message += i == 0 ? "" : "\n";
-
-					Selection selection = selections.get(i);
-
-					if (selection.isCell()) {
-						// isCell() returns true if a cell has been selected.
-
-						// getRow() returns the row number of the selected cell.
-						int row = selection.getRow();
-						// getColumn() returns the column number of the selected
-						// cell.
-						int column = selection.getColumn();
-						message += "cell " + row + ":" + column + " selected";
-					} else if (selection.isRow()) {
-						// isRow() returns true if an entire row has been
-						// selected.
-
-						// getRow() returns the row number of the selected row.
-						int row = selection.getRow();
-						message += "row " + row + " selected";
-					} else {
-						// unreachable
-						message += "Pie chart selections should be either row selections or cell selections.";
-						message += "  Other visualizations support column selections as well.";
-					}
-				}
-
-				Window.alert(message);
-			}
-		};
-	}
-
-	private AbstractDataTable createTable(Set <String> visibleSites) {
-		DataTable data = DataTable.create();
-		data.addColumn(ColumnType.STRING, "Site");
-		data.addColumn(ColumnType.NUMBER, "Consumption in kWh");
 	 
-		data.addRows(visibleSites.size());
-		 int i=0;
-		for (String site:visibleSites) {
-		data.setValue(i, 0, Document.get().getElementById(site).getInnerText());
-		data.setValue(i++, 1, 14);
-		} 
-		return data;
-	}
 
 }

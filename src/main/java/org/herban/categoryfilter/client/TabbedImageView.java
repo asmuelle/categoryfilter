@@ -1,8 +1,12 @@
 package org.herban.categoryfilter.client;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Set;
 
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -27,11 +31,15 @@ public class TabbedImageView {
     	HorizontalPanel timeFilterPanel=new HorizontalPanel();
     	 
     	timeFilterPanel.setSpacing(10);
-    	
-    	timeFilterPanel.add(new Label("filter from"));
-    	timeFilterPanel.add(new DateBox());
+    	DateBox b1=new DateBox();
+    	b1.setValue(new Date(new Date().getTime()-1000*60*60*24));
+    	DateBox b2=new DateBox();
+    	b2.setValue(new Date());	
+    	timeFilterPanel.add(new Label("from"));
+    	timeFilterPanel.add(b1);
     	timeFilterPanel.add(new Label("to"));
-    	timeFilterPanel.add(new DateBox());
+    	timeFilterPanel.add(b2);
+    
     	boxLayout.add(timeFilterPanel);
     	
     	TabPanel tabPanel=new TabPanel();
@@ -43,8 +51,26 @@ public class TabbedImageView {
     	HTMLPanel otherChartPanel=new HTMLPanel("<h1>coming soon ...</h1>");
     	 
     	
-    	tabPanel.add( otherChartPanel, "some Interactive Chart");
+    	tabPanel.add( otherChartPanel, "some other Chart");
+    	final FilterDialog filterDialog= new FilterDialog();
     	dialogBox.add(boxLayout);
+    	Button closeButton =new Button("close", new ClickHandler(){
+
+			public void onClick(ClickEvent event) {
+				dialogBox.hide();
+				
+			}});
+    	  final Button filterButton=new Button("filter", new ClickHandler(){
+
+  			public void onClick(ClickEvent event) {
+  				filterDialog.show("");
+  				
+  			}});
+    	HorizontalPanel buttonBar=new HorizontalPanel();
+    	boxLayout.add(buttonBar);
+    	buttonBar.add(filterButton);
+    	buttonBar.add(closeButton);
+    	
         tabPanel.selectTab(0);
         
     	 
