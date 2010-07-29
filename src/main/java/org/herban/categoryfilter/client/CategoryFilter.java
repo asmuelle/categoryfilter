@@ -9,7 +9,6 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
@@ -21,11 +20,9 @@ import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.CheckBox;
-import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Tree;
 import com.google.gwt.user.client.ui.TreeItem;
@@ -43,54 +40,47 @@ public class CategoryFilter implements EntryPoint {
 	 * categories The rows belonging to <tbody id=sitetable> are interpreted as
 	 * item list to be filtered
 	 */
+    private static HashMap<String, CheckBox> checkBoxes = new HashMap<String, CheckBox>();
+	
 	public void onModuleLoad() {
 
 		final Set<Tree> categoryTrees = buildCategoryTrees();
 		;
 		final Map<String, Set<String>> sitesByCategory = new HashMap<String, Set<String>>();
 		final Set<String> allSites = new TreeSet<String>();
-		final Set<CheckBox> selectedSites = new HashSet<CheckBox>();
-	
+		final Set<String> selectedSites = new HashSet<String>();
+		final Set<String> visibleSites = new HashSet<String>();
+			
+			
 		final TabbedImageView detailsView = new TabbedImageView();
         final Button compareButton=new Button("compare", new ClickHandler(){
 
 			public void onClick(ClickEvent event) {
-				detailsView.show("xyz");
+				final PieChartView pieChartView= new PieChartView(selectedSites);
+				pieChartView.show();
 				
 			}});
         compareButton.setVisible(false);
-        RootPanel.get().add(compareButton);
-        ValueChangeHandler valuehandler=new ValueChangeHandler(){
-
-			public void onValueChange(ValueChangeEvent event) {
-				Set<String> sites=new HashSet();
-				for (CheckBox box:selectedSites) {
-					if (box.getValue()) {
-						sites.add(box.getTitle());
-					}
-					
-				}
-				compareButton.setVisible(sites.size()>1);
-				
-			}};
+        RootPanel.get("piechart").add(compareButton);
+       
 		NodeList<Element> rowList = RootPanel.get("sitetable").getElement()
 				.getElementsByTagName("tr");
 		for (int i = 0; i < rowList.getLength(); i++) {
 			final TableRowElement tr = rowList.getItem(i).cast();
 			allSites.add(tr.getId());
 			NodeList<TableCellElement> cells = tr.getCells();
-
+            
 			if (cells != null && cells.getLength() > 1) {
-				Anchor a = new Anchor("details", "#");
+				Anchor a = new Anchor(cells.getItem(2).getInnerHTML(), "#");
 				RootPanel.get().add(a);
 				a.addClickHandler(new ClickHandler() {
 
 					public void onClick(ClickEvent arg0) {
-						detailsView.show(tr.getId() );
+						detailsView.show(tr.getId(), tr.getCells().getItem(2).getInnerText() );
 
 					}
 				});
-
+               
 				cells.getItem(2).setInnerHTML("");
 				
 				cells.getItem(2).appendChild(a.getElement());
@@ -98,8 +88,21 @@ public class CategoryFilter implements EntryPoint {
 				String[] categories = cells.getItem(0).getInnerText()
 						.split(" ");
 				CheckBox cb=new CheckBox();
-				selectedSites.add(cb);
-				cb.addValueChangeHandler(valuehandler);
+			    checkBoxes.put(tr.getId(), cb);
+				cb.addValueChangeHandler(new ValueChangeHandler<Boolean>(){
+
+					public void onValueChange(ValueChangeEvent<Boolean> event) {
+						if (event.getValue()) {
+							selectedSites.add(tr.getId());
+						} else {
+							selectedSites.remove(tr.getId());
+						}
+						    //selectedSites.retainAll(visibleSites);
+							compareButton.setVisible(selectedSites.size()>1);
+						
+					}
+
+					});
 				cb.setTitle(tr.getId());
 				cells.getItem(0).setInnerHTML(" ");
 				cells.getItem(0).setAttribute("style", "");
@@ -143,6 +146,8 @@ public class CategoryFilter implements EntryPoint {
 				Set<String> visibleSites=SetAlgebra.getIntersectionOfItemsByFilter(filters,
 						allSites, sitesByCategory);
 				filterTable(visibleSites, allSites);
+			    selectedSites.retainAll(visibleSites);
+				compareButton.setVisible(selectedSites.size()>1);
 				 
 
 			}
@@ -242,10 +247,12 @@ public class CategoryFilter implements EntryPoint {
 
 			} else {
 				row.setAttribute("style", "display:none");
+				CheckBox cb=checkBoxes.get(row.getId());
+				cb.setValue(false);
 			}
 		}
 	}
-
+	 
 	 
 
 }

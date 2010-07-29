@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>CategoryFilter</name>
+	<name>categoryfilter</name>
 	<comment>CategoryFilter project</comment>
 	<projects>
 	</projects>
@@ -12,11 +12,6 @@
 		</buildCommand>
 		<buildCommand>
 			<name>org.maven.ide.eclipse.maven2Builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.google.gdt.eclipse.core.webAppProjectValidator</name>
 			<arguments>
 			</arguments>
 		</buildCommand>

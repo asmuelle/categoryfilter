@@ -12,11 +12,11 @@ import com.google.gwt.user.client.ui.TabPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
  
 
-public class FilterDialog {
+public class WeeklyTimeFilterDialog {
     private DialogBox dialogBox;
     private Set<String> siteIdentifiers;
    
-    public FilterDialog() {
+    public WeeklyTimeFilterDialog() {
     	 
     	this.dialogBox= new DialogBox(true, true);
     	dialogBox.setText("Filter");

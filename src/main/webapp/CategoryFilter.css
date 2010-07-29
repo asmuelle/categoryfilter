@@ -1,7 +1,56 @@
 /** Add css rules here for your application. */
 
+.daylabel, .excluded{cursor:pointer;background-color:lightgreen;border:1px solid #eee;color:black}
+.daylabel:hover{border:1px solid red}
+.excluded {background-color:red;color:white}
+.excluded:hover{border:1px solid black}
+td:hover{background-color:yellow;text-decoration:underline}
+th{background-color:#ccc}
 
-/** Example rules used by the template application (remove for your app) */
+.FlexTable {
+  border-top: thin solid #444444;
+  border-left: thin solid #444444;
+  border-right: thin solid #111111;
+  border-bottom: thin solid #111111;
+  background-color:  #808080;
+  width:800px;
+  color:white;
+}
+
+.FlexTable-OddRow {
+  background-color: #cccccc;
+}
+
+.FlexTable-EvenRow {
+  background-color:  #505050;
+}
+
+
+.FlexTable-ColumnLabel {
+  color: white;
+  padding: 3px;
+}
+
+.FlexTable-ColumnLabelCell {
+  border-width:  1px  ;
+  border-style: solid;
+  border-color: #aaa;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color:#eee;
+  width:120px;
+  color:black;
+  cursor:pointer
+}
+
+.FlexTable-Cell {
+  border-width: 0px 0px 0px 1px;
+  border-style: solid;
+  border-color: white;
+  
+}
+
 h1 {
   font-size: 2em;
   font-weight: bold;
