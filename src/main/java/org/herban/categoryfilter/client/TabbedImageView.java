@@ -30,32 +30,15 @@ public class TabbedImageView {
     	dialogBox.setTitle("Details");
     	
     	VerticalPanel boxLayout=new VerticalPanel();
-    	HorizontalPanel timeFilterPanel=new HorizontalPanel();
-    	 
-    	timeFilterPanel.setSpacing(10);
-    	DateBox b1=new DateBox();
-    	b1.setValue(new Date(new Date().getTime()-1000*60*60*24));
-    	DateBox b2=new DateBox();
-    	b2.setValue(new Date());	
-    	ListBox periodFilter= new ListBox();
-    	periodFilter.addItem("Last Full Year", "1");
-    	periodFilter.addItem("Last Rolling Year", "1");
-    	periodFilter.addItem("Last YTD", "1");
-    	periodFilter.addItem("Last Full Quarter", "1");
-    	periodFilter.addItem("Last Full Month", "1");
-    	periodFilter.addItem("Last Full Year", "1");
-    	timeFilterPanel.add(periodFilter);
-    	timeFilterPanel.add(new Label("from"));
-    	timeFilterPanel.add(b1);
-    	timeFilterPanel.add(new Label("to"));
-    	timeFilterPanel.add(b2);
-        timeFilterPanel.add(new WeekDaySelector());
-    	boxLayout.add(timeFilterPanel);
+    	
+    	boxLayout.add(new DateRangePreselectionPanel());
     	
     	TabPanel tabPanel=new TabPanel();
     	boxLayout.add(tabPanel);
     	VerticalPanel ddaChartPanel=new VerticalPanel();
-    	ddaChartPanel.add(ddaChart);
+    	HTMLPanel otherChartPanel2=new HTMLPanel("<h1>coming very soon ...</h1>");
+    	
+    	ddaChartPanel.add(otherChartPanel2);
     	
     	tabPanel.add( ddaChartPanel, "DDAChart");
     	HTMLPanel otherChartPanel=new HTMLPanel("<h1>coming soon ...</h1>");

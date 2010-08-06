@@ -1,6 +1,5 @@
 package org.herban.categoryfilter.client;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,18 +8,14 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.NumberFormat;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
-import com.google.gwt.user.client.ui.DisclosurePanel;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.MultiWordSuggestOracle;
-import com.google.gwt.user.client.ui.RadioButton;
+import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.user.client.ui.SuggestBox;
-import com.google.gwt.user.client.ui.SuggestOracle;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.HTMLTable.Cell;
-import com.google.gwt.user.client.ui.MultiWordSuggestOracle.MultiWordSuggestion;
-import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
 
 public class TimePeriodFilterDialog {
     private DialogBox dialogBox;
@@ -58,8 +53,10 @@ public class TimePeriodFilterDialog {
        
     	final FlexTable weekPanel=new FlexTable();
     	weekPanel.setStylePrimaryName("FlexTable");
+    	ScrollPanel scrollPanel=new ScrollPanel(weekPanel);
+    	scrollPanel.setSize("100%", "500px");
     	weekPanel.addClickHandler(new ClickHandler(){
-
+     
 			public void onClick(ClickEvent event) {
 				Cell cell=weekPanel.getCellForEvent(event);
 				Object color=colorMap.get(labelBox.getValue());
@@ -91,7 +88,7 @@ public class TimePeriodFilterDialog {
         
         
         boxLayout.add(labelChooser);
-        boxLayout.add(weekPanel);
+        boxLayout.add(scrollPanel);
     	dialogBox.add(boxLayout);
     	Button closeButton =new Button("close", new ClickHandler(){
 

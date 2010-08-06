@@ -4,7 +4,7 @@
 .daylabel:hover{border:1px solid red}
 .excluded {background-color:red;color:white}
 .excluded:hover{border:1px solid black}
-td:hover{background-color:yellow;text-decoration:underline}
+ 
 th{background-color:#ccc}
 
 .FlexTable {

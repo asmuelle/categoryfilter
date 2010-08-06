@@ -53,16 +53,26 @@ public class CategoryFilter implements EntryPoint {
 			
 			
 		final TabbedImageView detailsView = new TabbedImageView();
-        final Button compareButton=new Button("compare", new ClickHandler(){
+        final Button compareButton1=new Button("pie chart year", new ClickHandler(){
 
 			public void onClick(ClickEvent event) {
-				final PieChartView pieChartView= new PieChartView(selectedSites);
+				final PieChartView pieChartView= new PieChartView(selectedSites,3);
 				pieChartView.show();
 				
 			}});
-        compareButton.setVisible(false);
-        RootPanel.get("piechart").add(compareButton);
-       
+        final Button compareButton2=new Button("pie chart rolling month", new ClickHandler(){
+
+			public void onClick(ClickEvent event) {
+				final PieChartView pieChartView= new PieChartView(selectedSites,4);
+				pieChartView.show();
+				
+			}});
+        compareButton1.setVisible(false);
+        compareButton2.setVisible(false);
+        
+        RootPanel.get("piechart").add(compareButton1);
+        RootPanel.get("piechart").add(compareButton2);
+        
 		NodeList<Element> rowList = RootPanel.get("sitetable").getElement()
 				.getElementsByTagName("tr");
 		for (int i = 0; i < rowList.getLength(); i++) {
@@ -98,7 +108,8 @@ public class CategoryFilter implements EntryPoint {
 							selectedSites.remove(tr.getId());
 						}
 						    //selectedSites.retainAll(visibleSites);
-							compareButton.setVisible(selectedSites.size()>1);
+							compareButton1.setVisible(selectedSites.size()>1);
+							compareButton2.setVisible(selectedSites.size()>1);
 						
 					}
 
@@ -147,8 +158,9 @@ public class CategoryFilter implements EntryPoint {
 						allSites, sitesByCategory);
 				filterTable(visibleSites, allSites);
 			    selectedSites.retainAll(visibleSites);
-				compareButton.setVisible(selectedSites.size()>1);
-				 
+				compareButton1.setVisible(selectedSites.size()>1);
+				compareButton2.setVisible(selectedSites.size()>1);
+				  
 
 			}
 		};

@@ -18,14 +18,14 @@ import com.google.gwt.visualization.client.visualizations.Table;
 public class PieChartView {
     private DialogBox dialogBox;
     
-    public PieChartView(final Set<String> selection) {
+    public PieChartView(final Set<String> selection, final int i) {
      	
     	this.dialogBox= new DialogBox(true, true);
     	dialogBox.setText("Pie Chart");
     	dialogBox.setTitle("Pie Chart");
     	  VisualizationUtils.loadVisualizationApi(new Runnable() {
     	      public void run() {
-    	        dialogBox.add(createPieChart(selection));
+    	        dialogBox.add(createPieChart(selection, i));
     	       
     	       
     	      }}, PieChart.PACKAGE, Table.PACKAGE);
@@ -40,10 +40,11 @@ public class PieChartView {
     }
     /**
      * Creates a pie chart visualization.
+     * @param col 
      * 
      * @return panel with pie chart.
      */
-    private Widget createPieChart(Set<String> selection) {
+    private Widget createPieChart(Set<String> selection, int col) {
       /* create a datatable */
       NodeList<Element> rowList = RootPanel.get("sitetable").getElement().getElementsByTagName("tr");
       DataTable data = DataTable.create();
@@ -54,7 +55,7 @@ public class PieChartView {
 	    final TableRowElement tr = rowList.getItem(i).cast();
 	    if (selection.contains(tr.getId())) {
 	      data.setValue(i, 0, tr.getCells().getItem(2).getInnerText());
-	      data.setValue(i, 1, Integer.parseInt(tr.getCells().getItem(3).getInnerText()));
+	      data.setValue(i, 1, Integer.parseInt(tr.getCells().getItem(col).getInnerText()));
 	    }
       }
     
@@ -68,7 +69,7 @@ public class PieChartView {
       options.setWidth(400);
       options.setHeight(240);
       options.set3D(true);
-      options.setTitle("Energy Consumption in kwHr per year");
+      options.setTitle("Energy Consumption in kwHr");
       return new PieChart(data, options);
     }
 
